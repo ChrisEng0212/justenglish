@@ -7,7 +7,14 @@
 
 <script type="text/javascript" >
 
-alert('hello')
+var str = window.location.href
+var path = window.location.pathname
+let url = 'jinwen-english.info' + path
+console.log('goTO', url);
+
+window.onload = function() {
+    window.location.href = url
+}
 
 
 </script>
