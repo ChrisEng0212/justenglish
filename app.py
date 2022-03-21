@@ -8,7 +8,11 @@ app = Flask(__name__)
 print('running')
 
 @app.route ("/<string:page>", methods=['GET','POST'])
-def index(page):
+def index():
+   return render_template('index.html')
+
+@app.route ("/", methods=['GET','POST'])
+def home():
    return render_template('index.html')
 
 if __name__ == '__main__':
